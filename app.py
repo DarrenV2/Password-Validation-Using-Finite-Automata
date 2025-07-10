@@ -9,7 +9,7 @@ def home():
 @app.route('/check', methods=['POST'])
 def validate():
     password = request.form['password']
-    # Call your DFA validation function here
+   
     result = "Valid" if dfa_validate_password(password) else "Invalid"
     return render_template('result.html', result=result)
 
