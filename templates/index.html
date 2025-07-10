@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFA Password Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <main>
+        <section class="validator-card">
+            <h1>DFA Password Checker</h1>
+            <form action="{{ url_for('validate') }}" method="post" autocomplete="off">
+                <label for="password">Enter a password:</label>
+                <input type="text" id="password" name="password" required />
+                <button type="submit">Check</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
