@@ -11,6 +11,8 @@
         <section class="validator-card">
             <h1>Result</h1>
             <p>Password is <strong>{{ result }}</strong></p>
+            <p>Validation method: <strong>{{ method|capitalize }}</strong></p>
+            <p>Time taken: <strong>{{ duration }} ms</strong></p>
             <a href="/" class="retry-button">Try Another</a>
         </section>
     </main>

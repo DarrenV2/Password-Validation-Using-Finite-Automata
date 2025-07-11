@@ -1,4 +1,4 @@
-from main import dfa_validate_password
+from naive import dfa_validate_password
 
 
 userPassword = input ("Enter Password:")

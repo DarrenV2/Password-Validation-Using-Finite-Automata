@@ -1,4 +1,4 @@
-def dfa_validate_password(password):
+def naive_validate_password(password):
     state ='q1'
     validState = 'q15'
     if not password:

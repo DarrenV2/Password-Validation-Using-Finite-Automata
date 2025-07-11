@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DFA Password Checker</title>
+    <title>Password Validator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
     <main>
         <section class="validator-card">
-            <h1>DFA Password Checker</h1>
+            <h1>Password Validator</h1>
             <form action="{{ url_for('validate') }}" method="post" autocomplete="off">
                 <label for="password">Enter a password:</label>
                 <input type="text" id="password" name="password" required />
-                <button type="submit">Check</button>
+
+                <label for="method">Choose validation method:</label>
+                <select name="method" id="method" required>
+                    <option value="dfa">DFA-Based</option>
+                    <option value="naive">Naive Rule-Based</option>
+                </select>
+
+                <button type="submit">Validate</button>
             </form>
         </section>
     </main>
