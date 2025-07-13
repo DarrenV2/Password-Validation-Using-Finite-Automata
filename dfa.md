@@ -1,3 +1,8 @@
+# Authors: Darren Drummond, Frederica Forbes , Justin Edwards & Rajaire Thomas
+# Date: July 13, 2025
+# DFA Password Validation
+**State Table** 
+
 | **Current State**  | **Input: a** | **Input: b** | **Input: A** | **Input: B** | **Input: 0** | **Input: 1** |
 | ------------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 | **q0** _(trap)_    | q0           | q0           | q0           | q0           | q0           | q0           |

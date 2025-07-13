@@ -1,3 +1,7 @@
+# Authors: Darren Drummond, Frederica Forbes , Justin Edwards & Rajaire Thomas
+# Date: July 13, 2025
+# DFA Password Validation
+
 from flask import Flask, render_template, request
 from naive import naive_validate_password
 from dfa import DFA

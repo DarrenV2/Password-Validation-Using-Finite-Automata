@@ -4,7 +4,7 @@ class DFA:
         self.accept_state = "q15"
         self.current_state = self.start_state
 
-        # Transition table
+        # Transition table aka State dictionary
         self.transitions = {
             "q0":  {"a": "q0", "b": "q0", "A": "q0", "B": "q0", "0": "q0", "1": "q0"},
             "q1":  {"a": "q2", "b": "q2", "A": "q8", "B": "q8", "0": "q0", "1": "q0"},
@@ -24,10 +24,10 @@ class DFA:
             "q15": {"a": "q15", "b": "q15", "A": "q15", "B": "q15", "0": "q15", "1": "q15"},
         }
 
-    def reset(self):
+    def reset(self): # Defined Function used to reset DFA to start state
         self.current_state = self.start_state
 
-    def process_input(self, string):
+    def process_input(self, string): 
         self.reset()
         for char in string:
             if char not in self.transitions[self.current_state]:
