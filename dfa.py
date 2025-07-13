@@ -28,37 +28,28 @@ class DFA:
         self.current_state = self.start_state
 
     def process_input(self, string): 
+        """
+        Process an input string through the DFA to determine if it's accepted.
+        
+        Args:
+            string (str): The input string to process
+            
+        Returns:
+            bool: True if the string is accepted by the DFA, False otherwise
+        """
+        # Reset DFA to initial state before processing
         self.reset()
+        
+        # Process each character in the input string
         for char in string:
+            # Check if the current character is valid for the current state
             if char not in self.transitions[self.current_state]:
-                return False
+                return False  # Invalid transition - string is rejected
+            
+            # Update current state based on the transition table (transitioning from one state to the next)
             self.current_state = self.transitions[self.current_state][char]
+        
+        # Check if we ended in an accepting state
         return self.current_state == self.accept_state
 
 
-def main():
-    """Main function to run the DFA test cases."""
-    print("=== DFA String Recognition Test ===\n")
-    
-    # Initialize DFA
-    dfa = DFA()
-
-    # # Test cases
-    # test_cases = [
-    #     "aAaaa",   # Valid
-    #     "A01bb",   # Valid
-    #     "b1aaa",   # Invalid (no uppercase)
-    #     "B",       # Invalid (too short)
-    #     "B1111",   # Valid
-    #     "a111B",   # Valid
-    #     "1111B",   # Invalid (doesn't start with a letter)
-    # ]
-
-    # # Run tests
-    # for s in test_cases:
-    #     result = "ACCEPTED" if dfa.process_input(s) else "REJECTED"
-    #     print(f"{s} ➤ {result}")
-
-
-if __name__ == "__main__":
-    main()
