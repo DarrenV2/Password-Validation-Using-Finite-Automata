@@ -71,8 +71,6 @@ A valid password must:
 ## Authors
 
 - Darren Drummond
-- Frederica Forbes
-- Justin Edwards
 - Rajaire Thomas
 
 ---
